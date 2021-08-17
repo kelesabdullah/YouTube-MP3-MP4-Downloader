@@ -1,0 +1,2 @@
+# YouTube-MP3-MP4-Downloader
+YouTube linkini girip, videoyu ister mp4, ister mp3 olarak indirme imkanı sunan orta gelişmiş bir algoritma. Mp3 converter siteleri ile uğraşmak istemeyenler için aşırı basit arayüzü olan güzel bir uygulama. Tkinter ile yapıldı. Fotoğrafı icon için kullandım. Siz aynı dizine başka bir fotoğraf atıp ismini benimkiyle değiştirirseniz iconunuz değişecektir. Ancak icon dosyasını silerseniz uygulama çalışmayacaktır.
