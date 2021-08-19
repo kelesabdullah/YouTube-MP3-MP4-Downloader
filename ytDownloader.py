@@ -16,16 +16,19 @@ window.iconphoto(False,icon)
 
 window.resizable(0,0)
 
-window.title("Youtube Video Downloader V1.1 August 17")
-tk.Label(window, text ="Youtube Video Downloader", font ="arial 20 bold").pack()
+window.title("Youtube Video Downloader V1.3 August 19")
+tk.Label(window, text ="Youtube Video Downloader", font ="arial 20 bold",bg="cyan").pack()
 link = tk.StringVar()
 
 checkmp4ormp3 = tk.IntVar()
 checkmp4ormp3.set(1)
-tk.Label(window, text ="Linki buraya yapıştır", font ="arial 15 bold").place(x=10, y=80)
-link_error = tk.Entry(window, width =70, textvariable = link).place(x =10, y=110)
+
 mp4check = ttk.Radiobutton(window,text="MP4 OLARAK İNDİR",variable=checkmp4ormp3,value=1).pack()
 mp3check = ttk.Radiobutton(window,text="MP3 OLARAK İNDİR",variable=checkmp4ormp3,value=2).pack()
+
+tk.Label(window, text ="Linki buraya yapıştır", font ="arial 15 bold",bg="black",fg="white").pack()
+link_error = ttk.Entry(window, width =70, textvariable = link).pack()
+
 def Downloader():
     checker = checkmp4ormp3.get()
     if checker==1:
@@ -34,9 +37,9 @@ def Downloader():
             video =url.streams.get_highest_resolution()
             dosyayolu = pathsave()   
             video.download(dosyayolu)
-            messagebox.showinfo("Youtube Video Downloader V1.2 August 17",f"{video.title}\nYükleme tamamlandı.\n Kaydedilen dizin: \n {dosyayolu}")
+            messagebox.showinfo("Youtube Video Downloader V1.3 August 19",f"{video.title}\nYükleme tamamlandı.\n Kaydedilen dizin: \n {dosyayolu}")
         except pytube.exceptions.RegexMatchError:
-            messagebox.showerror("Youtube Video Downloader V1.2 August 17","Hatalı link girişi!")
+            messagebox.showerror("Youtube Video Downloader V1.3 August 19","Hatalı link girişi!")
         
         
         
@@ -51,9 +54,9 @@ def Downloader():
             base, ext = os.path.splitext(downloaded_file)
             new_file = base + '.mp3'
             os.rename(downloaded_file, new_file)
-            messagebox.showinfo("Youtube Video Downloader V1.2 August 17",f"{video.title}\nYükleme tamamlandı.\n Kaydedilen dizin: \n {downloaded_file}")
+            messagebox.showinfo("Youtube Video Downloader V1.3 August 19",f"{video.title}\nYükleme tamamlandı.\n Kaydedilen dizin: \n {downloaded_file}")
         except pytube.exceptions.RegexMatchError:
-            messagebox.showerror("Youtube Video Downloader V1.2 August 17","Hatalı link girişi!")
+            messagebox.showerror("Youtube Video Downloader V1.3 August 19","Hatalı link girişi!")
         
             
         
