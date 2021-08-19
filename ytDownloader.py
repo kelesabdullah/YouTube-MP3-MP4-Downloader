@@ -24,8 +24,8 @@ checkmp4ormp3 = tk.IntVar()
 checkmp4ormp3.set(1)
 tk.Label(window, text ="Linki buraya yapıştır", font ="arial 15 bold").place(x=10, y=80)
 link_error = tk.Entry(window, width =70, textvariable = link).place(x =10, y=110)
-mp4check = tk.Radiobutton(window,text="MP4 OLARAK İNDİR",variable=checkmp4ormp3,value=1).pack()
-mp3check = tk.Radiobutton(window,text="MP3 OLARAK İNDİR",variable=checkmp4ormp3,value=2).pack()
+mp4check = ttk.Radiobutton(window,text="MP4 OLARAK İNDİR",variable=checkmp4ormp3,value=1).pack()
+mp3check = ttk.Radiobutton(window,text="MP3 OLARAK İNDİR",variable=checkmp4ormp3,value=2).pack()
 def Downloader():
     checker = checkmp4ormp3.get()
     if checker==1:
